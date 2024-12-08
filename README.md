@@ -4,6 +4,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+# Shopy - E-Commerce Application
+
+An e-commerce platform where users can browse products, filter by categories, sort by price or rating, and view product details. Built using React.js and styled with Bootstrap.
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 In the project directory, you can run:
 
 ### `npm start`

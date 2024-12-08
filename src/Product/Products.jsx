@@ -27,7 +27,7 @@ const Products = () => {
       // Update query parameters for filters
        const handleFilter = (category) => {
         const newParams = { search: searchQuery }; // Preserve the search query
-         if (category) newParams.category = category;
+        if (category) newParams.category = category;
            setSearchParams(newParams);
        };
 
@@ -61,15 +61,15 @@ const Products = () => {
          const LastProduct = currentPage * itemsPerPage;
          const FirstProduct = LastProduct - itemsPerPage;
          const currentProducts = sortedProducts.slice(FirstProduct, LastProduct);
- 
+
       // Handle Page Change
-         const handlePageChange = (pageNumber) => {
+         const handlePage = (pageNumber) => {
            setCurrentPage(pageNumber);
          };
       return (
       <div>
           <div className='header'>
-                <h1 className='title'>Shopy</h1>  
+            <h1 className='title'>Shopy</h1>  
 
               {/* Search Bar */}
               <InputGroup style={{ width: "300px", height:"19px"}}>
@@ -124,9 +124,9 @@ const Products = () => {
           </div>
           {/* Pagination Controls */}
           <div style={{ textAlign: "center", marginTop: "20px" }}>
-            <button className='page_button' onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>&lt;&lt;&lt;&lt;</button>
+            <button className='page_button' onClick={() => handlePage(currentPage - 1)} disabled={currentPage === 1}>&lt;&lt;&lt;&lt;</button>
             <span style={{ margin: "0 10px" }}>Page {currentPage}</span>
-            <button className='page_button' onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage * itemsPerPage >= sortedProducts.length}>&gt;&gt;&gt;&gt;</button>
+            <button className='page_button' onClick={() => handlePage(currentPage + 1)} disabled={currentPage * itemsPerPage >= sortedProducts.length}>&gt;&gt;&gt;&gt;</button>
           </div>
        </div>
   );
