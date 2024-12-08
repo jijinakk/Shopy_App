@@ -1,10 +1,9 @@
 import React from 'react'
-import { createContext, useState,useEffect } from 'react';
-import axios from "axios";
+import { useState } from 'react';
 import { Card, Form, InputGroup, Dropdown, DropdownButton } from "react-bootstrap";
 import { useContext } from 'react';
 import { productlist } from '../App';
-import { useNavigate ,useSearchParams} from 'react-router-dom';
+import { useSearchParams} from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 const Products = () => {
